@@ -3,10 +3,24 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"encoding/json"
+	"time"
 )
 
+type Payload struct {
+	Time string `json:"time"`
+}
+
 func HandleTime(res http.ResponseWriter, req *http.Request) {
-	fmt.Fprintf(res, "I'm not ready yet >.<")
+	res.Header().Set("Content-Type", "application/json")
+
+	payload := Payload{Time: time.Now().Format(time.RFC3339)}
+	data, err := json.Marshal(payload)
+	if err != nil {
+
+	}
+
+	fmt.Fprintf(res, string(data))
 }
 
 const port = 8795
