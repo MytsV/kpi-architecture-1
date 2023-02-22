@@ -10,7 +10,7 @@ $ cd kpi-architecture-1
 ```bash
 $ go run .
 ```
-Now go to the http://localhost:8795/time and get the server time!
+Now open http://localhost:8795/time in browser and get the server time!
 ## Contribution
 
 [CodeBryksy](https://github.com/CodeBryksy) team:
