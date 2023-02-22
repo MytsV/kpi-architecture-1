@@ -21,7 +21,7 @@ func HandleTime(res http.ResponseWriter, req *http.Request) {
 	payload := Payload{Time: time.Now().Format(time.RFC3339)}
 	data, err := json.Marshal(payload)
 	if err != nil {
-
+		panic(err)
 	}
 
 	fmt.Fprintf(res, string(data))
@@ -35,6 +35,6 @@ func main() {
 	fmt.Printf("Starting server at port %d\n", port)
 	portFmt := fmt.Sprintf(":%d", port)
 	if err := http.ListenAndServe(portFmt, nil); err != nil {
-		//TODO: implement error handling
+		panic(err)
 	}
 }
