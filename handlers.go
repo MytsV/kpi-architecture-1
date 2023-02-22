@@ -8,7 +8,7 @@ import (
 )
 
 type Payload struct {
-	Time string `json:"time"`
+	Time string `json:"foo"`
 }
 
 func HandleTime(res http.ResponseWriter, req *http.Request) {
