@@ -18,3 +18,5 @@ Now open http://localhost:8795/time in browser and get the server time!
 - Людмила ГОРБУНОВА
 - Світлана БАРИЦЬКА
 - Вікторія МИЦЬ
+
+![ukrainian gopher](http://bakalova.ink/wp-content/uploads/2016/09/gopher-girl.png)
